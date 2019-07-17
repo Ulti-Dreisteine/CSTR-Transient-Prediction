@@ -1,0 +1,77 @@
+# device and kinetic params
+V: 100.0
+k_0: 7.2e+10
+E_div_R: 1.0e+4
+ro: 1.0e+3
+roc: 1.0e+3
+Cp: 1.0
+Cpc: 1.0
+qc: 100.0
+hA: 7.0e+5
+delta_H: 2.0e+5
+Tc_0: 350.0
+
+# initial variable values
+ca_init: 0.0882
+T_init: 441.2
+
+# initial operating params
+ca_0: 1.0
+T_0: 350.0
+q: 1.0e+2
+
+# operate params bounds
+operate_params_bounds:
+  ca_0: [0.95, 1.1]
+  T_0: [348.0, 352.0]
+  q: [0.98e+2, 1.1e+2]
+
+# computational params
+dt: 0.01
+steps: 100000
+
+# modeling params
+pred_dim: 500
+samples_len: 80000
+pred_horizon_len: 12000
+exist_record_time: 85000
+
+batch_size: 1000
+lr: 0.0005
+epochs: 10000
+
+columns: ['ca', 'T', 'ca_0', 'T_0', 'q']
+source_columns: ['ca', 'T', 'ca_0', 'T_0', 'q']
+target_columns: ['ca', 'T']
+
+embed_lags:  # corresponding to acf decreasing to 0.9
+  ca: 10
+  T: 10
+  ca_0: 10
+  T_0: 10
+  q: 10
+
+acf_lags:
+  ca: 340
+  T: 360
+  ca_0: 1050
+  T_0: 370
+  q: 1000
+
+forecast_lags:
+  ca_0: 0
+  T_0: 0
+  q: 0
+
+variable_bounds:
+  ca: [0.0, 0.2]
+  T: [410, 465]
+  ca_0: [0.9, 1.2]
+  T_0: [348.0, 352.0]
+  q: [98.0, 110.0]
+
+
+
+
+
+
