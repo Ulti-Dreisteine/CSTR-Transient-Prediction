@@ -30,7 +30,7 @@ if __name__ == '__main__':
 	# 构造测试数据
 	X_test, y_test, continuous_columns_num = build_test_samples_and_targets()
 	
-	sample_num = 4500  #
+	sample_num = 6600  # 指定该样本在测试样本中的位置
 	x_test, y_test_raw = X_test[sample_num - 1: sample_num, :], y_test[sample_num - 1: sample_num, :]
 	y_test_raw = y_test_raw[-1:, :]
 	y_test_model = model_prediction(x_test, nn_model)
