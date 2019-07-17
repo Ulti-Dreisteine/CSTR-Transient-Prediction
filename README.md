@@ -1,0 +1,2 @@
+# cstr_transient_model
+使用CSTR暂态数据对其未来稳态数据进行预测
