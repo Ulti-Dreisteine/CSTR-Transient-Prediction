@@ -45,23 +45,23 @@ source_columns: ['ca', 'T', 'ca_0', 'T_0', 'q']
 target_columns: ['ca', 'T']
 
 embed_lags:  # corresponding to acf decreasing to 0.9
-  ca: 10
-  T: 10
+  ca: 5
+  T: 5
   ca_0: 10
   T_0: 10
   q: 10
 
 acf_lags:
-  ca: 340
-  T: 360
-  ca_0: 1050
-  T_0: 370
-  q: 1000
+  ca: 1140
+  T: 1160
+  ca_0: 780
+  T_0: 500
+  q: 780
 
 forecast_lags:
-  ca_0: 0
-  T_0: 0
-  q: 0
+  ca_0: 500
+  T_0: 500
+  q: 500
 
 variable_bounds:
   ca: [0.0, 0.2]

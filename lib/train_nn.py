@@ -110,7 +110,7 @@ if __name__ == '__main__':
 			save_models(nn_model, train_loss_record, verify_loss_record)
 			
 		# 画loss曲线
-		if (use_cuda is False) & (epoch % 5 == 0):
+		if epoch % 5 == 0:
 			train_loss_list = [float(p.detach().cpu().numpy()) for p in train_loss_record]
 			verify_loss_list = [float(p.cpu().numpy()) for p in verify_loss_record]
 			plt.figure('loss curve', figsize = [4, 3])

@@ -78,7 +78,7 @@ if __name__ == '__main__':
 	# 参数设定
 	source_columns = config.conf['source_columns']
 	target_columns = config.conf['target_columns']
-	detect_sep_loc = 1250
+	detect_sep_loc = 1500
 
 	# 计算显著作用时间范围
 	total_ccf_results = load_ccf_results()

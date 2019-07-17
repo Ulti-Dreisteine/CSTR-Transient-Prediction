@@ -117,9 +117,9 @@ if __name__ == '__main__':
 		op_param_records[:, 2]]
 	
 	# ccf分析
-	d_list = np.arange(-1500, 1505, 10)
+	d_list = np.arange(-2500, 2505, 20)
 	seg_len = 500  # 单次ccf计算选取的序列长度
-	start_locs = np.arange(2000, 50000, 500)
+	start_locs = np.arange(2500, 50000, 200)
 	
 	plt.figure(figsize = [10, 14])
 	total_time_delay_ccf = {}

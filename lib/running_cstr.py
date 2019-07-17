@@ -116,7 +116,7 @@ def normalize(data, columns):
 if __name__ == '__main__':
 	columns = config.conf['columns']
 	
-	seq_len_range = [60, 120]
+	seq_len_range = [300, 500]
 	results, op_param_records = run_cstr(seq_len_range, show = True)
 	
 	data = pd.DataFrame(np.hstack((results, op_param_records)), columns = columns)
